@@ -1,5 +1,9 @@
 'use strict'
 
+function init() {
+  getYTRes('עמוס').then(renderSearchedRes)
+}
+
 function onSearch(e) {
   e.preventDefault()
   let elInput = document.querySelector('.search-input')
