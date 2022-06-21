@@ -31,15 +31,16 @@ function getYTRes(query) {
     return axios
       .get(getYTApi(query))
       .then(res => {
-        _saveSearch(query, res.data)
-
         return res.data
       })
       .then(res => getWikiApi(res, query))
-      .then(res => res)
+      .then(res => {
+        _saveSearch(query, res)
+        return res
+      })
   }
 }
 function _saveSearch(query, data) {
-  gYTCaches.push({ query: query, items: data.items })
+  gYTCaches.push({ wikiText: data.wikiText, query: query, items: data.items })
   saveToStorage(YT_SEARCH, gYTCaches)
 }

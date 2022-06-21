@@ -1,6 +1,38 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-family: 'Lato', sans-serif;
+}
+
+.header {
+  width: 90%;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 8vh;
+  margin-block: 2rem;
+}
+
+.video-list {
+  flex-basis: 30%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 34px;
+}
+
 .video {
+  cursor: pointer;
   width: 200px;
   font-size: 12px;
+
+  gap: 34px;
 }
 
 img {
@@ -8,8 +40,16 @@ img {
 }
 
 form {
-  text-align: center;
-  margin-bottom: 2rem;
+  flex-basis: 50%;
+  display: flex;
+}
+input {
+  height: 50px;
+  flex-basis: 80%;
+}
+button {
+  flex-basis: 20%;
+  height: 50px;
 }
 
 .title {
@@ -19,10 +59,41 @@ form {
 .main {
   display: flex;
 }
-.video-list {
-  flex-basis: 30%;
-}
 
 .main-video {
-  flex-basis: 80%;
+  flex-basis: 70%;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.layout {
+  width: 680px;
+}
+
+.video-title {
+  margin-bottom: 2rem;
+}
+
+@media screen and (max-width: 937px) {
+  .layout {
+    width: 500px;
+  }
+  #video {
+    width: 500px;
+    height: 400px;
+  }
+}
+
+@media screen and (max-width: 787px) {
+  .main {
+    flex-direction: column;
+    gap: 4rem;
+  }
+  .video-list {
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
 }
