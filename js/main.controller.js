@@ -25,7 +25,10 @@ function renderSearchedRes(searchData) {
     `
     })
     .join('')
-  document.querySelector('.video-list').innerHTML = strHTML
+
+  const elVideoList = document.querySelector('.video-list')
+  elVideoList.classList.remove('hidden')
+  elVideoList.innerHTML = strHTML
 
   const elPlayer = document.getElementById('video')
 
