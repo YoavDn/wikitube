@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <link rel="stylesheet" href="style.css" />
+    <title>wikiTube</title>
+  </head>
+  <body>
+    <form onsubmit="onSearch(event)">
+      <input class="search-input" type="search" placeholder="search..." />
+      <button type="submit">Search</button>
+    </form>
+
+    <div class="video-list"></div>
+
+    <script src="js/storage.js"></script>
+    <script src="js/main.service.js"></script>
+    <script src="js/main.controller.js"></script>
+  </body>
+</html>
