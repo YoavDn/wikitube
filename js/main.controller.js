@@ -9,8 +9,9 @@ function onSearch(e) {
 }
 
 function renderSearchedRes(searchData) {
+  console.log(searchData)
   const { items } = searchData
-  console.log(items)
+  //   console.log(items)
 
   const strHTML = items
     .map(video => {
@@ -24,4 +25,8 @@ function renderSearchedRes(searchData) {
     })
     .join('')
   document.querySelector('.video-list').innerHTML = strHTML
+  const elPlayer = document.getElementById('video')
+
+  elPlayer.src = `https://www.youtube.com/embed/${items[0].id.videoId}`
+  document.querySelector('.wiki-text').innerHTML = searchData.wikiText
 }

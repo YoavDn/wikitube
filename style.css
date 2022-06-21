@@ -1,0 +1,28 @@
+.video {
+  width: 200px;
+  font-size: 12px;
+}
+
+img {
+  width: 200px;
+}
+
+form {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.title {
+  text-align: center;
+}
+
+.main {
+  display: flex;
+}
+.video-list {
+  flex-basis: 30%;
+}
+
+.main-video {
+  flex-basis: 80%;
+}

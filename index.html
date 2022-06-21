@@ -9,12 +9,19 @@
     <title>wikiTube</title>
   </head>
   <body>
+    <h2 class="title">WikiTube</h2>
     <form onsubmit="onSearch(event)">
       <input class="search-input" type="search" placeholder="search..." />
       <button type="submit">Search</button>
     </form>
 
-    <div class="video-list"></div>
+    <main class="main">
+      <div class="main-video">
+        <iframe id="video" width="520" height="415" src="https://www.youtube.com/embed/CHdad2x8ftQ"> </iframe>
+        <h2 class="wiki-text"></h2>
+      </div>
+      <div class="video-list"></div>
+    </main>
 
     <script src="js/storage.js"></script>
     <script src="js/main.service.js"></script>
