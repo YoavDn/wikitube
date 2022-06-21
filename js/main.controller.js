@@ -18,7 +18,7 @@ function renderSearchedRes(searchData) {
       const { thumbnails, title } = video.snippet
 
       return `
-     <div class="video" onclick="onloadVideo()">
+     <div class="video" onclick="onLoadVideo('${video.id.videoId}', '${title}')">
             <h2>${title}</h2>
             <img src="${thumbnails.default.url}" alt="">
         </div>
@@ -26,9 +26,17 @@ function renderSearchedRes(searchData) {
     })
     .join('')
   document.querySelector('.video-list').innerHTML = strHTML
+
   const elPlayer = document.getElementById('video')
 
+  document.querySelector('.query-wiki-title').innerText = searchData.query
   document.querySelector('.video-title').innerText = title
   elPlayer.src = `https://www.youtube.com/embed/${items[0].id.videoId}`
   document.querySelector('.wiki-text').innerHTML = searchData.wikiText
+}
+
+function onLoadVideo(videoId, title) {
+  const elPlayer = document.getElementById('video')
+  elPlayer.src = `https://www.youtube.com/embed/${videoId}`
+  document.querySelector('.video-title').innerText = `${title}`
 }

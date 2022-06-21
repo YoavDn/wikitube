@@ -42,14 +42,21 @@ img {
 form {
   flex-basis: 50%;
   display: flex;
+  border: solid gray 1px;
 }
 input {
   height: 50px;
   flex-basis: 80%;
+  border: none;
 }
 button {
+  cursor: pointer;
   flex-basis: 20%;
   height: 50px;
+  border: none;
+
+  color: white;
+  background-color: brown;
 }
 
 .title {
@@ -84,6 +91,11 @@ button {
     width: 500px;
     height: 400px;
   }
+}
+
+.query-wiki-title {
+  margin-bottom: 1rem;
+  text-decoration: underline;
 }
 
 @media screen and (max-width: 787px) {
